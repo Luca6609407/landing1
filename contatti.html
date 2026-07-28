@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salemme | Contatti — Consulenza COBOL, CICS, DB2</title>
+<meta name="description" content="Contatta Salemme per una consulenza su sistemi mainframe IBM: COBOL, CICS, DB2. Contatto diretto e riservato via Signal con QR code.">
+<meta name="keywords" content="Salemme, COBOL, CICS, DB2, contatti consulente COBOL, consulenza mainframe IBM, contatto Signal, richiesta consulenza CICS DB2 VSAM">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tuodominio.it/contatti.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salemme | Contatti — Consulenza COBOL, CICS, DB2">
+<meta property="og:description" content="Contatto diretto e riservato per una consulenza su sistemi mainframe IBM: COBOL, CICS, DB2.">
+<meta property="og:url" content="https://tuodominio.it/contatti.html">
+<meta property="og:locale" content="it_IT">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%2317324f'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23ffb000' text-anchor='middle'%3ELS%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="index.html">Luca Salemme <span class="dot">·</span> Legacy IBM</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Apri il menu">Menu</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="servizi.html">Servizi</a></li>
+      <li><a href="chi-sono.html">Chi sono</a></li>
+      <li><a href="contatti.html" class="nav-cta" aria-current="page">Contatti</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-bottom:0;">
+    <div class="container">
+      <p class="eyebrow">Contatti Salemme</p>
+      <h1>Scrivimi per una prima valutazione</h1>
+      <p class="lede">Il canale principale è Signal, per una comunicazione diretta e riservata. Inquadra il QR code con l'app oppure usa il link testuale qui sotto.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container contact-grid">
+
+      <div class="qr-card">
+        <div class="qr-box" id="qrcode" aria-hidden="true"></div>
+        <p class="signal-id" id="signal-id-text">signal.me/#p/+39XXXXXXXXXX</p>
+        <p class="caption">Inquadra il codice con l'app Signal, oppure apri il link diretto:</p>
+        <a class="qr-fallback-link" id="signal-fallback-link" href="#" rel="noopener">Apri contatto su Signal →</a>
+      </div>
+
+      <div>
+        <h2 class="mt-0">Altri riferimenti</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="k">Canale principale</span>
+            <span class="v"><a href="#" id="signal-fallback-link-2" rel="noopener">Signal</a></span>
+          </li>
+          <li>
+            <span class="k">Email</span>
+            <span class="v"><a href="mailto:info@tuodominio.it">info@tuodominio.it</a></span>
+          </li>
+          <li>
+            <span class="k">Area</span>
+            <span class="v">Italia — remoto o on-site su richiesta</span>
+          </li>
+          <li>
+            <span class="k">Tempi di risposta</span>
+            <span class="v">Entro 1–2 giorni lavorativi</span>
+          </li>
+        </ul>
+
+        <p class="notice" style="margin-top:1.6em;">
+          <strong>Nota per chi personalizza questo sito:</strong> il numero/username Signal è un segnaposto (<code>+39XXXXXXXXXX</code>). Sostituiscilo in <code>js/main.js</code>, variabile <code>SIGNAL_CONTACT</code>, con il tuo link reale <code>signal.me/#p/+39...</code> oppure <code>signal.me/#eu/...</code>: il QR code si aggiornerà automaticamente. Aggiorna anche l'indirizzo email e il dominio nei tag <code>canonical</code>/<code>og:url</code> di tutte le pagine.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <span>© <span id="year"></span> Luca Salemme — Consulenza sistemi legacy IBM</span>
+    <nav>
+      <a href="servizi.html">Servizi</a>
+      <a href="chi-sono.html">Chi sono</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Mirror the fallback link into the second reference in the contact list
+  document.addEventListener('DOMContentLoaded', function () {
+    var main = document.getElementById('signal-fallback-link');
+    var second = document.getElementById('signal-fallback-link-2');
+    if (main && second) {
+      var apply = function () { second.href = main.href; };
+      setTimeout(apply, 0);
+    }
+  });
+</script>
+</body>
+</html>
