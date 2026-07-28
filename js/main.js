@@ -23,8 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Replace SIGNAL_CONTACT with your real signal.me link, e.g.:
   //   https://signal.me/#p/+391234567890   (phone-based)
   //   https://signal.me/#eu/xxxxxxxxxxxx   (username-based)
-  var SIGNAL_CONTACT = 'https://signal.me/#p/+39XXXXXXXXXX';
 
+
+  // var SIGNAL_CONTACT = 'https://signal.me/#eu/ILK6oCmwHV0ICVzjEqe10No-xiSI7J-feXxEPhRRTbouy661pZ9Gi7dQtOnj1Ygo';
+  var SIGNAL_CONTACT = 'https://signal.me/#eu/LucaSalemme.01';
   var qrEl = document.getElementById('qrcode');
   var idEl = document.getElementById('signal-id-text');
   var linkEl = document.getElementById('signal-fallback-link');
